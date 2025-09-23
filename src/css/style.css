@@ -1,0 +1,6 @@
+ body {
+        font-family: 'Poppins', sans-serif;
+        }
+        .bg-brand-primary { background-color: #EC4899; }
+        .text-brand-primary { color: #EC4899; }
+        .border-brand-primary { border-color: #EC4899; }
