@@ -1,273 +1,288 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./src/assets/imgs/Gemini_Generated_Image_3ixixx3ixixx3ixi.png">
-    <title>Melodia Simples</title>
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css"> 
+    
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'], // Original
+                        'oswald': ['Oswald', 'sans-serif'], // LP Titles
+                        'roboto-mono': ['Roboto Mono', 'monospace'], // LP Body
+                    },
+                    colors: {
+                        // Cores Padrão
+                        'gray-900': '#111827',
+                        'gray-800': '#1F2937',
+                        'gray-700': '#374151',
+                        'gray-600': '#4B5563',
+                        'gray-500': '#6B7280',
+                        'gray-400': '#9CA3AF',
+                        'gray-300': '#D1D5DB',
+                        'brand-primary': '#EC4899',
+                        'brand-secondary': '#DB2777',
+                        'dark-bg': '#1E293B',
+                        'dark-card': '#111827',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-900 text-white">
-    <header class="text-center py-20 px-6 bg-gray-800">
-        <h1 class="text-4xl md:text-6xl font-black text-brand-primary mb-4">Melodia Simples: Suas músicas, sua forma</h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            A experiência definitiva para descobrir, organizar e viver a música como nunca antes.
-        </p>
-        <a href="#ouvir" class="bg-brand-primary hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">
-            Ouvir Agora
-        </a>
-        <div class="mt-12 max-w-3xl mx-auto">
-            <img src="./src/assets/imgs/Gemini_Generated_Image_1aj2cc1aj2cc1aj2.png" alt="Demonstração do Aplicativo Melodia" class="rounded-lg shadow-2xl w-full">
+<body class="bg-body text-primary font-body scroll-smooth">
+    <button id="theme-toggle" class="fixed bottom-6 right-6 z-50 bg-brand-primary-var hover:bg-brand-secondary-var text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+        <i class="fa-solid fa-lightbulb text-xl"></i>
+    </button>
+
+    <header class="bg-hero-gradient-var text-center py-24 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-lp-darkest opacity-30 theme-linkin-park:opacity-0"></div> <div class="container mx-auto relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 font-title uppercase">
+                <span class="text-gradient-var">Melodia:</span> Seu Som de Impacto
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-secondary">
+                A plataforma definitiva para explorar e dominar sua paisagem sonora. Liberte a intensidade da sua música.
+            </p>
+            <a href="#funcionalidades" class="bg-brand-primary-var hover:bg-brand-secondary-var text-white font-bold py-4 px-10 rounded-md text-lg transition-all duration-300 transform hover:scale-110 shadow-lg shadow-lp-accent-red/30 uppercase font-title tracking-wide">
+                Iniciar Missão <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+            <div class="mt-16 max-w-xl mx-auto transform hover:scale-105 transition-transform duration-500 shadow-var">
+                <img src="./src/assets/imgs/Gemini_Generated_Image_1aj2cc1aj2cc1aj2.png" alt="Demonstração do Aplicativo Melodia" class="rounded-lg w-full border-2 border-card-var">
+            </div>
         </div>
     </header>
 
-    <section id="beneficios" class="py-20 px-6">
-            <div class="container mx-auto max-w-5xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Por que escolher o Melodia?</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-800 p-5 rounded-full mb-4">
-                            <i class="fas fa-headphones-alt fa-3x text-brand-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Qualidade de Som Superior</h3>
-                        <p class="text-gray-400">Ouça suas músicas com clareza e profundidade incomparáveis.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-800 p-5 rounded-full mb-4">
-                            <i class="fa-solid fa-music fa-3x text-brand-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Criação de Playlists</h3>
-                        <p class="text-gray-400">Crie e compartilhe playlists perfeitas para cada momento da sua vida.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-800 p-5 rounded-full mb-4">
-                            <i class="fas fa-magnifying-glass-chart fa-3x text-brand-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Descubra Novos Artistas</h3>
-                        <p class="text-gray-400">Nossas recomendações inteligentes te conectam com seu próximo artista favorito.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-800 p-5 rounded-full mb-4">
-                            <i class="fas fa-mobile-screen-button fa-3x text-brand-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Interface Intuitiva</h3>
-                        <p class="text-gray-400">Navegue com facilidade e encontre o que procura sem complicações.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="funcionalidades" class="bg-gray-800 py-20 px-6">
-            <div class="container mx-auto max-w-6xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Funcionalidades Incríveis</h2>
-                <div class="flex flex-col md:flex-row items-center bg-gray-900 rounded-lg shadow-lg overflow-hidden mb-10">
-                    <img src="https://placehold.co/600x400/EC4899/1F2937?text=Playlists" alt="Criação de Playlists" class="w-full md:w-1/2">
-                    <div class="p-8 md:p-12">
-                        <h3 class="text-2xl font-bold text-brand-primary mb-3">Motor de Descoberta Avançado</h3>
-                        <p class="text-gray-300">Vá além do óbvio. Nosso algoritmo analisa seu gosto musical para sugerir joias escondidas e novos lançamentos que você vai amar. Perfeito para expandir seus horizontes musicais.</p>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row-reverse items-center bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x400/EC4899/1F2937?text=Qualidade+HD" alt="Qualidade de Som" class="w-full md:w-1/2">
-                    <div class="p-8 md:p-12">
-                        <h3 class="text-2xl font-bold text-brand-primary mb-3">Modo Offline e Qualidade HD</h3>
-                        <p class="text-gray-300">Leve sua música para qualquer lugar, mesmo sem internet. Baixe suas playlists favoritas com qualidade de estúdio e nunca mais fique sem trilha sonora.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="depoimentos" class="py-20 px-6">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">O que nossos usuários dizem</h2>
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-                        <p class="text-gray-300 italic mb-6">"Finalmente um app que entende meu gosto musical! As recomendações são sempre certeiras. Mudei para o Melodia e não me arrependo."</p>
-                        <div class="flex items-center">
-                            <img src="https://i.pravatar.cc/100?u=a" alt="Foto de Perfil" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">Ana Júlia</p>
-                                <p class="text-sm text-brand-primary">Amante de Indie Rock</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-                        <p class="text-gray-300 italic mb-6">"A interface é linda e super fácil de usar. Adoro como organizo minhas playlists e a qualidade do som é simplesmente fantástica."</p>
-                        <div class="flex items-center">
-                            <img src="https://i.pravatar.cc/100?u=b" alt="Foto de Perfil" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">Carlos Mendes</p>
-                                <p class="text-sm text-brand-primary">DJ e Produtor</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="musicas-do-momento" class="py-20 px-6 bg-dark-bg">
+    <main>
+        <section id="beneficios" class="py-20 px-6 bg-body">
             <div class="container mx-auto max-w-6xl">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-white">
-                        <span class="text-gradient text-brand-primary">Músicas</span> do Momento
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-title uppercase">Por que escolher o <span class="text-gradient-var">Melodia?</span></h2>
+                    <p class="text-lg text-secondary mt-4 font-body">Força e precisão em cada nota, no seu controle.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-card p-8 rounded-xl border border-card-var text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-var">
+                        <i class="fas fa-headphones-alt text-4xl text-brand-primary-var mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-title uppercase">Som Implacável</h3>
+                        <p class="text-secondary font-body">Ouça suas músicas com uma intensidade e clareza sem igual.</p>
+                    </div>
+                    <div class="bg-card p-8 rounded-xl border border-card-var text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-var">
+                        <i class="fa-solid fa-music text-4xl text-brand-primary-var mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-title uppercase">Armamento de Playlists</h3>
+                        <p class="text-secondary font-body">Crie e gerencie arsenais sonoros para cada momento.</p>
+                    </div>
+                    <div class="bg-card p-8 rounded-xl border border-card-var text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-var">
+                        <i class="fas fa-magnifying-glass-chart text-4xl text-brand-primary-var mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-title uppercase">Exploração Tática</h3>
+                        <p class="text-secondary font-body">Descubra novos sons com um sistema de recomendação poderoso.</p>
+                    </div>
+                    <div class="bg-card p-8 rounded-xl border border-card-var text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-var">
+                        <i class="fas fa-mobile-screen-button text-4xl text-brand-primary-var mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-title uppercase">Controle Absoluto</h3>
+                        <p class="text-secondary font-body">Interface precisa e objetiva para sua experiência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="funcionalidades" class="py-20 px-6 bg-section-alt">
+            <div class="container mx-auto max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-title uppercase">Funcionalidades <span class="text-gradient-var">Otimizadas</span></h2>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-16 bg-body p-8 rounded-xl border border-card-var shadow-var">
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold text-primary mb-4 font-title uppercase">Análise de Frequência Avançada</h3>
+                        <p class="text-lg text-secondary mb-6 font-body">Vá além do óbvio. Nosso algoritmo analisa seu gosto musical para sugerir joias escondidas e novos lançamentos que você vai amar. Perfeito para expandir seus horizontes musicais.</p>
+                        <a href="#" class="text-brand-primary-var font-semibold text-lg hover:text-brand-secondary-var font-body">Detalhes Técnicos <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./src/assets/imgs/unnamed2.png" alt="Descoberta de Música" class="rounded-xl shadow-lg border border-card-var">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 bg-body p-8 rounded-xl border border-card-var shadow-var">
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold text-primary mb-4 font-title uppercase">Modo Tático Offline e HD</h3>
+                        <p class="text-lg text-secondary mb-6 font-body">Leve sua música para qualquer lugar, mesmo sem internet. Baixe suas playlists favoritas com qualidade de estúdio e nunca mais fique sem trilha sonora.</p>
+                        <a href="#" class="text-brand-primary-var font-semibold text-lg hover:text-brand-secondary-var font-body">Especificações <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./src/assets/imgs/unnamed3.png" alt="Modo Offline" class="rounded-xl shadow-lg border border-card-var">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="musicas-do-momento" class="py-20 px-6 bg-body">
+            <div class="container mx-auto max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-primary font-title uppercase">
+                        <span class="text-gradient-var">Arquivos</span> Sonoros em Destaque
                     </h2>
-                    <p class="text-lg text-gray-400 mt-4">Descubra os hits que estão bombando e as faixas que você não pode perder.</p>
+                    <p class="text-lg text-secondary mt-4 font-body">Engaje com as composições que reverberam mais forte.</p>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                    <div class="bg-dark-card rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group">
-                        <img src="./src/assets/imgs/Linkin_Park_Minutes_to_Midnight.jpg" alt="Capa da Música 1" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="bg-card rounded-xl shadow-var overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group border border-card-var">
+                        <img src="./src/assets/imgs/Linkin_Park_Minutes_to_Midnight.jpg" alt="Minutes to Midnight" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-lg text-white truncate">Minutes to Midnight</h3>
-                            <p class="text-sm text-gray-400 truncate">Linkin Park</p>
+                            <h3 class="font-bold text-lg text-primary truncate font-title uppercase">Minutes to Midnight</h3>
+                            <p class="text-sm text-secondary truncate font-body">Linkin Park</p>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=xX38FJ8TBgE&list=RDxX38FJ8TBgE&start_radio=1" target="_blank" class="absolute inset-0 bg-dark-card bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button class="bg-brand-primary text-white p-4 rounded-full hover:bg-brand-secondary transition-colors duration-300 transform hover:scale-110">
-                                <i class="fa-solid fa-play text-2xl"></i>
+                        <a href="https://www.youtube.com/watch?v=xX38FJ8TBgE&list=RDxX38FJ8TBgE&start_radio=1" target="_blank" class="absolute inset-0 bg-card bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                            <button class="bg-brand-primary-var text-white py-2 px-4 rounded-full hover:bg-brand-secondary-var transition-colors duration-300 transform hover:scale-110 flex items-center justify-center text-sm font-semibold font-title uppercase">
+                                <i class="fa-solid fa-expand-alt mr-2"></i> Ver Álbum
                             </button>
                         </a>
                     </div>
 
-                    <div class="bg-dark-card rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group">
-                        <img src="./src/assets/imgs/Linkin_Park_Hybrid_Theory.jpg" alt="Capa da Música 2" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="bg-card rounded-xl shadow-var overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group border border-card-var">
+                        <img src="./src/assets/imgs/Linkin_Park_Hybrid_Theory.jpg" alt="Hybrid Theory" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-lg text-white truncate">Hybrid Theory</h3>
-                            <p class="text-sm text-gray-400 truncate">Linkin Park</p>
+                            <h3 class="font-bold text-lg text-primary truncate font-title uppercase">Hybrid Theory</h3>
+                            <p class="text-sm text-secondary truncate font-body">Linkin Park</p>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=D2ts2GWOSv8&list=RDD2ts2GWOSv8&start_radio=1" target="_blank" class="absolute inset-0 bg-dark-card bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button class="bg-brand-primary text-white p-4 rounded-full hover:bg-brand-secondary transition-colors duration-300 transform hover:scale-110">
-                                <i class="fa-solid fa-play text-2xl"></i>
+                        <a href="https://www.youtube.com/watch?v=D2ts2GWOSv8&list=RDD2ts2GWOSv8&start_radio=1" target="_blank" class="absolute inset-0 bg-card bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                            <button class="bg-brand-primary-var text-white py-2 px-4 rounded-full hover:bg-brand-secondary-var transition-colors duration-300 transform hover:scale-110 flex items-center justify-center text-sm font-semibold font-title uppercase">
+                                <i class="fa-solid fa-expand-alt mr-2"></i> Ver Álbum
                             </button>
                         </a>
                     </div>
 
-                    <div class="bg-dark-card rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group">
-                        <img src="./src/assets/imgs/Linkin_Park_-_Living_Things.jpg" alt="Capa da Música 3" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="bg-card rounded-xl shadow-var overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group border border-card-var">
+                        <img src="./src/assets/imgs/Linkin_Park_-_Living_Things.jpg" alt="Living Things" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-lg text-white truncate">Living Things</h3>
-                            <p class="text-sm text-gray-400 truncate">Linkin Park</p>
+                            <h3 class="font-bold text-lg text-primary truncate font-title uppercase">Living Things</h3>
+                            <p class="text-sm text-secondary truncate font-body">Linkin Park</p>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=lMd7k_iCrrM&list=RDlMd7k_iCrrM&start_radio=1" target="_blank" class="absolute inset-0 bg-dark-card bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button class="bg-brand-primary text-white p-4 rounded-full hover:bg-brand-secondary transition-colors duration-300 transform hover:scale-110">
-                                <i class="fa-solid fa-play text-2xl"></i>
+                        <a href="https://www.youtube.com/watch?v=lMd7k_iCrrM&list=RDlMd7k_iCrrM&start_radio=1" target="_blank" class="absolute inset-0 bg-card bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                            <button class="bg-brand-primary-var text-white py-2 px-4 rounded-full hover:bg-brand-secondary-var transition-colors duration-300 transform hover:scale-110 flex items-center justify-center text-sm font-semibold font-title uppercase">
+                                <i class="fa-solid fa-expand-alt mr-2"></i> Ver Álbum
                             </button>
                         </a>
                     </div>
 
-                    <div class="bg-dark-card rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group">
-                        <img src="./src/assets/imgs/linkin-park-capa-from-zero.jpg" alt="Capa da Música 3" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="bg-card rounded-xl shadow-var overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group border border-card-var">
+                        <img src="./src/assets/imgs/linkin-park-capa-from-zero.jpg" alt="From Zero" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-lg text-white truncate">From Zero</h3>
-                            <p class="text-sm text-gray-400 truncate">Linkin Park</p>
+                            <h3 class="font-bold text-lg text-primary truncate font-title uppercase">From Zero</h3>
+                            <p class="text-sm text-secondary truncate font-body">Linkin Park</p>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=FSOz83aPO28&list=RDFSOz83aPO28&start_radio=1" target="_blank" class="absolute inset-0 bg-dark-card bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button class="bg-brand-primary text-white p-4 rounded-full hover:bg-brand-secondary transition-colors duration-300 transform hover:scale-110">
-                                <i class="fa-solid fa-play text-2xl"></i>
+                        <a href="https://www.youtube.com/watch?v=FSOz83aPO28&list=RDFSOz83aPO28&start_radio=1" target="_blank" class="absolute inset-0 bg-card bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                            <button class="bg-brand-primary-var text-white py-2 px-4 rounded-full hover:bg-brand-secondary-var transition-colors duration-300 transform hover:scale-110 flex items-center justify-center text-sm font-semibold font-title uppercase">
+                                <i class="fa-solid fa-expand-alt mr-2"></i> Ver Álbum
                             </button>
                         </a>
                     </div>
 
-                    <div class="bg-dark-card rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group">
-                        <img src="./src/assets/imgs/ab67616d0000b273145e1cf12538f5666511237d.jpg" alt="Capa da Música 4" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="bg-card rounded-xl shadow-var overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative group border border-card-var">
+                        <img src="./src/assets/imgs/ab67616d0000b273145e1cf12538f5666511237d.jpg" alt="One More Light" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-lg text-white truncate">One More Light</h3>
-                            <p class="text-sm text-gray-400 truncate">Linkin Park</p>
+                            <h3 class="font-bold text-lg text-primary truncate font-title uppercase">One More Light</h3>
+                            <p class="text-sm text-secondary truncate font-body">Linkin Park</p>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=fo90nWXy0KQ&list=RDfo90nWXy0KQ&start_radio=1" target="_blank">
-                            <div class="absolute inset-0 bg-dark-card bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="bg-brand-primary text-white p-4 rounded-full hover:bg-brand-secondary transition-colors duration-300 transform hover:scale-110">
-                                    <i class="fa-solid fa-play text-2xl"></i>
-                                </button>
+                        <a href="https://www.youtube.com/watch?v=fo90nWXy0KQ&list=RDfo90nWXy0KQ&start_radio=1" target="_blank" class="absolute inset-0 bg-card bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                            <button class="bg-brand-primary-var text-white py-2 px-4 rounded-full hover:bg-brand-secondary-var transition-colors duration-300 transform hover:scale-110 flex items-center justify-center text-sm font-semibold font-title uppercase">
+                                <i class="fa-solid fa-expand-alt mr-2"></i> Ver Álbum
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-20 px-6 bg-body">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-title uppercase">Ecos dos <span class="text-gradient-var">Usuários</span></h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-card p-8 rounded-xl border border-card-var shadow-var">
+                        <i class="fa-solid fa-quote-left text-3xl text-brand-primary-var mb-4"></i>
+                        <p class="text-lg italic text-primary mb-6 font-body">"Finalmente um sistema que sintoniza com a minha frequência. Recomendações precisas que ressoam. O Melodia é essencial."</p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?u=a" alt="Foto de Perfil" class="w-14 h-14 rounded-full mr-4 border-2 border-brand-primary-var">
+                            <div>
+                                <p class="font-bold text-primary text-lg font-title uppercase">Ana Júlia</p>
+                                <p class="text-sm text-secondary font-body">Mestra de Frequências</p>
                             </div>
-                        </a>
+                        </div>
+                    </div>
+                    <div class="bg-card p-8 rounded-xl border border-card-var shadow-var">
+                        <i class="fa-solid fa-quote-left text-3xl text-brand-primary-var mb-4"></i>
+                        <p class="text-lg italic text-primary mb-6 font-body">"A interface é brutalmente eficiente. Organizo minhas trilhas e a qualidade sonora é simplesmente letal. Indispensável."</p>
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/100?u=b" alt="Foto de Perfil" class="w-14 h-14 rounded-full mr-4 border-2 border-brand-primary-var">
+                            <div>
+                                <p class="font-bold text-primary text-lg font-title uppercase">Carlos Mendes</p>
+                                <p class="text-sm text-secondary font-body">Engenheiro de Som</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="download" class="bg-brand-primary py-20 px-6 text-white text-center">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
-                    Não Espere Mais! Baixe o <span class="text-dark-bg">Melodia</span> Hoje!
-                </h2>
-                <p class="text-lg mb-10 text-gray-100">
-                    Leve a melhor experiência musical para o seu dispositivo. Disponível para iOS e Android.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="https://play.google.com/store/apps" target="_blank" class="bg-dark-bg hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-xl flex items-center transition-all duration-300 transform hover:scale-105 shadow-xl shadow-black/30">
-                        <i class="fab fa-google-play text-3xl mr-3"></i>
-                        <div>
-                            <span class="block text-xs uppercase opacity-75">Baixar na</span>
-                            <span class="block text-xl">Google Play</span>
-                        </div>
-                    </a>
-                    <a href="https://www.apple.com/app-store/" target="_blank" class="bg-dark-bg hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-xl flex items-center transition-all duration-300 transform hover:scale-105 shadow-xl shadow-black/30">
-                        <i class="fab fa-apple text-3xl mr-3"></i>
-                        <div>
-                            <span class="block text-xs uppercase opacity-75">Baixar na</span>
-                            <span class="block text-xl">App Store</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section id="contato" class="bg-dark-card py-24 px-6">
+
+        <section id="contato" class="bg-section-alt py-24 px-6">
             <div class="container mx-auto max-w-3xl">
-                <div class="bg-dark-bg p-8 sm:p-12 rounded-2xl shadow-2xl text-center border border-gray-700/50">
-                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
-                        Pronto para uma nova <span class="text-gradient">experiência musical?</span>
+                <div class="bg-body p-8 sm:p-12 rounded-2xl shadow-var text-center border border-card-var">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-4 font-title uppercase">
+                        Pronto para uma nova <span class="text-gradient-var">imersão sonora?</span>
                     </h2>
-                    <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
-                        Cadastre-se para receber notícias sobre o Melodia, promoções exclusivas e acesso antecipado.
+                    <p class="text-lg text-secondary mb-10 max-w-2xl mx-auto font-body">
+                        Registre seu e-mail para acessar inteligência de áudio exclusiva e comunicações prioritárias.
                     </p>
                     
                     <form action="#" class="max-w-lg mx-auto">
                         <div class="flex flex-col sm:flex-row gap-4 items-center">
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                                    <i class="fa-solid fa-envelope text-gray-400"></i>
+                                    <i class="fa-solid fa-envelope text-secondary"></i>
                                 </div>
                                 <input 
                                     type="email" 
                                     name="email" 
-                                    placeholder="Seu melhor e-mail" 
+                                    placeholder="Seu e-mail de contato" 
                                     required 
-                                    class="w-full pl-12 pr-5 py-4 rounded-xl bg-dark-card text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all duration-300 placeholder-gray-500"
+                                    class="w-full pl-12 pr-5 py-4 rounded-xl bg-card text-primary border border-card-var focus:outline-none focus:ring-2 focus:ring-brand-primary-var transition-all duration-300 placeholder-secondary font-body"
                                 >
                             </div>
                             <button 
                                 type="submit" 
-                                class="w-full sm:w-auto flex-shrink-0 bg-brand-primary hover:bg-brand-secondary text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-brand-primary/20"
+                                class="w-full sm:w-auto flex-shrink-0 bg-brand-primary-var hover:bg-brand-secondary-var text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-lp-accent-red/30 uppercase font-title tracking-wide"
                             >
-                                Inscrever-se
+                                Ativar Acesso
                             </button>
                         </div>
-                        <p class="text-sm text-gray-500 mt-4">Respeitamos sua privacidade. Sem spam.</p>
+                        <p class="text-sm text-secondary mt-4 font-body">Protocolo de segurança: Dados protegidos.</p>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 py-10 px-6">
+    <footer class="bg-body text-secondary py-10 px-6">
         <div class="container mx-auto max-w-6xl text-center md:flex md:justify-between md:items-center">
-            <p class="mb-4 md:mb-0">&copy; 2025 App Melodia. Todos os direitos reservados.</p>
+            <p class="mb-4 md:mb-0 font-body">&copy; 2025 Melodia Systems. Todos os direitos reservados. Interface Alpha.</p>
             <div class="flex justify-center gap-6 mb-4 md:mb-0 text-2xl">
-                <a href="#" class="hover:text-brand-primary transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-brand-primary transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-brand-primary transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-brand-primary-var transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-brand-primary-var transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-primary-var transition-colors duration-300"><i class="fab fa-facebook"></i></a>
             </div>
             <div>
-                <a href="#" class="hover:text-white">Política de Privacidade</a>
+                <a href="#" class="hover:text-primary font-body transition-colors duration-300">Diretrizes de Acesso</a>
             </div>
         </div>
     </footer>
-
-    </body>
+</body>
+<script src="./src/js/theme-toggle.js"></script>
 </html>

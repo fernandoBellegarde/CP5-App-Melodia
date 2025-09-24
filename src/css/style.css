@@ -4,3 +4,58 @@
         .bg-brand-primary { background-color: #EC4899; }
         .text-brand-primary { color: #EC4899; }
         .border-brand-primary { border-color: #EC4899; }
+
+:root {
+            --color-bg-body: #111827;
+            --color-bg-header: #1F2937;
+            --color-bg-section-alt: #1F2937;
+            --color-bg-card: #1F2937;
+            --color-text-primary: #D1D5DB;
+            --color-text-secondary: #9CA3AF;
+            --color-brand-primary: #EC4899;
+            --color-brand-secondary: #DB2777;
+            --color-border-card: #4B5563;
+            --font-family-title: 'Poppins', sans-serif;
+            --font-family-body: 'Poppins', sans-serif;
+            --gradient-primary: linear-gradient(to right, #EC4899, #F472B6);
+            --gradient-header: linear-gradient(180deg, #111827 0%, #1F2937 100%);
+            --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .theme-linkin-park {
+            /* tema linkin park */
+            --color-bg-body: #1A1A1A;
+            --color-bg-header: #2B2B2B;
+            --color-bg-section-alt: #2B2B2B;
+            --color-bg-card: #2B2B2B;
+            --color-text-primary: #C0C0C0;
+            --color-text-secondary: #707070;
+            --color-brand-primary: #B22222;
+            --color-brand-secondary: #8B0000;
+            --color-border-card: #606060;
+            --font-family-title: 'Oswald', sans-serif;
+            --font-family-body: 'Roboto Mono', monospace;
+            --gradient-primary: linear-gradient(to right, #B22222, #606060);
+            --gradient-header: linear-gradient(180deg, #1A1A1A 0%, #2B2B2B 100%);
+            --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+        .bg-body { background-color: var(--color-bg-body); }
+        .bg-header { background-color: var(--color-bg-header); }
+        .bg-section-alt { background-color: var(--color-bg-section-alt); }
+        .bg-card { background-color: var(--color-bg-card); }
+        .text-primary { color: var(--color-text-primary); }
+        .text-secondary { color: var(--color-text-secondary); }
+        .bg-brand-primary-var { background-color: var(--color-brand-primary); }
+        .hover\:bg-brand-secondary-var:hover { background-color: var(--color-brand-secondary); }
+        .text-brand-primary-var { color: var(--color-brand-primary); }
+        .border-card-var { border-color: var(--color-border-card); }
+        .font-title { font-family: var(--font-family-title); }
+        .font-body { font-family: var(--font-family-body); }
+        .text-gradient-var { 
+            background-image: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .bg-hero-gradient-var { background: var(--gradient-header); }
+        .shadow-var { box-shadow: var(--shadow-card); }        
