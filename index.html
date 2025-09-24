@@ -55,9 +55,9 @@
   <body class="bg-body text-primary font-body scroll-smooth">
     <button
       id="theme-toggle"
-      class="fixed bottom-6 right-6 z-50 bg-brand-primary-var hover:bg-brand-secondary-var text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
+      class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-brand-primary-var hover:bg-brand-secondary-var text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
     >
-      <i class="fa-solid fa-lightbulb text-xl"></i>
+      <i class="fa-solid fa-lightbulb text-lg md:text-xl"></i>
     </button>
 
     <header
@@ -531,39 +531,40 @@
     </main>
 
     <footer class="bg-body text-secondary py-10 px-6">
-      <div
-        class="container mx-auto max-w-6xl text-center md:flex md:justify-between md:items-center"
-      >
-        <p class="mb-4 md:mb-0 font-body">
-          &copy; 2025 Melodia Systems. Todos os direitos reservados. Interface
-          Alpha.
+    <div
+        class="container mx-auto max-w-6xl flex flex-col items-center gap-6 text-center md:flex-row md:justify-between"
+    >
+        <p class="font-body text-sm order-3 md:order-1">
+            &copy; 2025 Melodia Systems. Todos os direitos reservados.
         </p>
-        <div class="flex justify-center gap-6 mb-4 md:mb-0 text-2xl">
-          <a
-            href="#"
-            class="hover:text-brand-primary-var transition-colors duration-300"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            href="#"
-            class="hover:text-brand-primary-var transition-colors duration-300"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="#"
-            class="hover:text-brand-primary-var transition-colors duration-300"
-            ><i class="fab fa-facebook"></i
-          ></a>
+
+        <div class="flex justify-center gap-6 text-2xl order-1 md:order-2">
+            <a
+                href="#"
+                class="hover:text-brand-primary-var transition-colors duration-300"
+                ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+                href="#"
+                class="hover:text-brand-primary-var transition-colors duration-300"
+                ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+                href="#"
+                class="hover:text-brand-primary-var transition-colors duration-300"
+                ><i class="fab fa-facebook"></i
+            ></a>
         </div>
-        <div>
-          <a
-            href="#"
-            class="hover:text-primary font-body transition-colors duration-300"
-            >Diretrizes de Acesso</a
-          >
+
+        <div class="order-2 md:order-3">
+            <a
+                href="#"
+                class="hover:text-primary font-body transition-colors duration-300"
+                >Diretrizes de Acesso</a
+            >
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
   </body>
   <script src="./src/js/theme-toggle.js"></script>
 </html>
